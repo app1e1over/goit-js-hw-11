@@ -14,9 +14,7 @@ document.querySelector("[type=submit]").addEventListener("click", async (e)=>{
     let q = encodeURIComponent(input.value);
     try{
     let res = await axios.get(`https://pixabay.com/api/?key=38473838-e891e831f166f48f183183908&q=${q}&image_type=photo&orientation=horizontal&safesearch=true&per_page=12`);
-    console.log(res);
-}
-    catch{
+    console.log(res);}catch{
         Notiflix.Notify.failure("something went wrong while fetching our request"); 
     }
 
