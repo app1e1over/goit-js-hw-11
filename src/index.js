@@ -2,11 +2,12 @@ import axios from "axios";
 import Notiflix from "notiflix";
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
-
+axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
 axios.defaults.headers.common["x-api-key"] = "38473838-e891e831f166f48f183183908";
 axios.defaults.headers.common["image_type"] = "photo";
 axios.defaults.headers.common["orientation"] = "horizontal";
 axios.defaults.headers.common["safesearch"] = "true";
+
 
 const input = document.querySelector("#search-form input");
 document.querySelector("[type=submit]").addEventListener("click", async (e)=>{
