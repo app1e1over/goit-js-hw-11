@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page title</title>
 
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <form class="search-form" id="search-form">
@@ -15,8 +16,24 @@
         placeholder="Search images..."
       />
       <button type="submit">Search</button>
+      <div style="display: flex; gap:40px">
+        <div class="switch">
+          <h3>Autoscroll</h3>
+          <input type="checkbox" id="Autoscroll">
+          <label for="Autoscroll"></label>
+        </div>
+
+        <div class="switch">
+          <h3>Autoload</h3>
+          <input type="checkbox" id="Autoload">
+          <label for="Autoload"></label>
+        </div>
+      </div>
     </form>
+    
+    <ul class="gallery" id="ll"></ul>
+    <button class="show-more hidden">show more</button>
   </body>
-      
+
   <script type="module" src="./index.js"></script>
 </html>
