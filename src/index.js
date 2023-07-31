@@ -28,6 +28,8 @@ document.querySelector('[type=submit]').addEventListener('click', async e => {
     showMore(true);
     if (res.hits.length == 0) {
       Notiflix.Notify.warning('no results found');
+    }else{
+      curpage++;
     }
   } catch (e) {
     console.log(e);
@@ -35,6 +37,7 @@ document.querySelector('[type=submit]').addEventListener('click', async e => {
   }
 });
 function clear() {
+  curpage=1;
   cont.innerHTML = '';
   showMore(false);
 }
